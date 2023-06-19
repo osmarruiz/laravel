@@ -79,7 +79,7 @@ class AlumnoController extends Controller
       Storage::disk('local')->put('archivo_alumnos.txt', $alumnosSerialice);
 
       $resultado = "Registro eliminado satisfactoriamente...";
-      return view('alumnoresformu')->with('res', $resultado)->with('listado', $alumnos);
+      return view('alumno.resformu')->with('res', $resultado)->with('listado', $alumnos);
    }
 
 
@@ -91,7 +91,7 @@ class AlumnoController extends Controller
          $lista = unserialize($file);
       }
       
-      return view('alumnoedicion')->with('datos',$lista[$id])->with('id',$id);
+      return view('alumno.edicion')->with('datos',$lista[$id])->with('id',$id);
    }
 
 
@@ -130,7 +130,7 @@ class AlumnoController extends Controller
          Storage::disk('local')->put('archivo_alumnos.txt', $alumnosSerialice);
       }
       $resultado = "Registro actualizado satisfactoriamente...";
-      return view('alumnoresformu')->with('res', $resultado)->with('listado', $alumnos);
+      return view('alumno.resformu')->with('res', $resultado)->with('listado', $alumnos);
       
    }
 }

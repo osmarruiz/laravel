@@ -21,6 +21,8 @@
                      Nombre: {{ $data->nombre }} <br/> 
                      Correo Electrónico: {{ $data->email }} <br/> 
                      Edad: {{ $data->edad }} <br/> Curso Actual: {{ $data->curso }} <br/> 
+                     <a href="/alumno/eliminar/{{array_search($data,$listado)}}" role="button" class="btn btn-danger">Eliminar</a>
+                     <a href="/alumno/editar/{{array_search($data,$listado)}}" role="button" class="btn btn-primary">Editar</a>     
                </td>
             </tr>
          @endforeach

@@ -21,6 +21,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/mensaje/{nombre}',[SaludoController::class,'Mensaje']);
 Route::get('/mayuscula/{nombre}', [SaludoController::class, 'Saludar']);
 Route::get('/comparar/{nom1}/{nom2}', [SaludoController::class, 'Comparar']);
 Route::get('/operacion/{num1}/{op}/{num2}', [OperacionesController::class, 'Operaciones']);
@@ -32,3 +33,6 @@ Route::get('/comparanombres/{nombre1}/{nombre2}', [SaludoController::class, 'Com
 Route::get('/alumno/create', [AlumnoController::class, 'create']);
 Route::post('/alumno/insert', [AlumnoController::class, 'insert']);
 Route::get('/alumno/list', [AlumnoController::class, 'list']);
+Route::get('/alumno/eliminar/{id}', [AlumnoController::class, 'eliminar']);
+Route::get('/alumno/editar/{id}', [AlumnoController::class, 'edit']);
+Route::post('/alumno/update', [AlumnoController::class, 'update']);

@@ -28,15 +28,21 @@
                         trabajo
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="{{ asset('/ini') }}">Inicio</a>
+                        <a class="dropdown-item" href="{{ asset('/') }}">Inicio</a>
                         <a class="dropdown-item" href="{{ asset('/mensaje/denis') }}">Saludo</a>
                         <a class="dropdown-item" href="{{ asset('/mayuscula/denis') }}">Mayuscula</a>
                         <a class="dropdown-item" href="{{ asset('/comparar/denis/alvaro') }}">Comparar</a>
+                        <a class="dropdown-item" href="{{ asset('/operacion/1/+/2') }}">Suma</a>
+                        <a class="dropdown-item" href="{{ asset('/tablas/') }}">Tablas</a>
+                        <a class="dropdown-item" href="{{ asset('/tablas/2') }}">Tablas del 2</a>
+                        <a class="dropdown-item" href="{{ asset('/calcular-edad/carlos/1998') }}">Calcular edad</a>
+                        <a class="dropdown-item" href="{{ asset('/alumno/create') }}">agregar alumno</a>
+
                     </div>
                 </div>
             </div>
             <div class=" col-sm-10 alert alert-secondary" role="alert">
-                @yield('contenido')
+                @yield('contenido') 
             </div>
         </div>
     </div>

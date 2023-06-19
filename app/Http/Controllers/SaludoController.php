@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 class SaludoController extends Controller
 {
+    public function Mensaje($nombre){
+        return "hola, {$nombre}!";
+    }
     public function Saludar($nombre){
         return strtoupper($nombre);
     }
